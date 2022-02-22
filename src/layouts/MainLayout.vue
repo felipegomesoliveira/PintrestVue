@@ -1,50 +1,35 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+    <v-app-bar height="100" app color="white" flat>
+      <v-layout align-center>
+        <v-flex>
+          <v-text-field prepend-inner-icon="mdi-magnify" label="Search" flat solo class="mt-7" color="grey"></v-text-field>
+        </v-flex>
+        <v-flex style="position:relative; left:80%;">
+            <v-btn height="48" class="mx-2 ml-4">
+                <v-icon> mdi-compare-vertical </v-icon>
+            </v-btn>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
+            <v-btn height="48" class="ml-2" dark>
+                <v-icon> mdi-plus </v-icon>
+            </v-btn>
+        </v-flex>
+      </v-layout>
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
     </v-app-bar>
 
     <v-navigation-drawer app permanent>
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="text-h6"> 
+          <v-list-item-title class="text-h6">
             <v-list-item-avatar>
-                <v-img
-                    width="10"
-                    lazy-src="https://logos-world.net/wp-content/uploads/2020/09/Pinterest-Logo-2011-present.png"
-                    src="https://logos-world.net/wp-content/uploads/2020/09/Pinterest-Logo-2011-present.png"
-                />
+              <v-img
+                width="10"
+                lazy-src="https://logos-world.net/wp-content/uploads/2020/09/Pinterest-Logo-2011-present.png"
+                src="https://logos-world.net/wp-content/uploads/2020/09/Pinterest-Logo-2011-present.png"
+              />
             </v-list-item-avatar>
-         </v-list-item-title>
+          </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
 
@@ -111,8 +96,8 @@ export default {
   data: () => ({
     items: [
       { title: "Home", icon: "mdi-view-dashboard" },
-      { title: "Recent", icon: "mdi-image" },
-      { title: "Following", icon: "mdi-help-box" },
+      { title: "Recent", icon: "mdi-clock-time-three" },
+      { title: "Following", icon: "mdi-account-heart" },
     ],
 
     items2: [
